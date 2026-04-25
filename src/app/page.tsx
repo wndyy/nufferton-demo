@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1>Nufferton Demo</h1>
+      <h1 className="text-3xl font-bold underline">Nufferton Demo</h1>
       <p>
         This is a minimal Next.js starter. If you can read this, the app is
         running.
