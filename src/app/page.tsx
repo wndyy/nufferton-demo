@@ -1,9 +1,11 @@
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Header />
+      <Hero />
       <main>
         <h1 className="text-3xl font-bold underline">Nufferton Demo</h1>
         <p>
@@ -14,6 +16,6 @@ export default function Home() {
           Edit <code>src/app/page.tsx</code> and save — the page will hot-reload.
         </p>
       </main>
-    </>
+    </div>
   );
 }
