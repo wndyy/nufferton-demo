@@ -21,7 +21,8 @@ import {
   SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -196,13 +197,17 @@ export default function Header() {
                   Company
                 </a>
               </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
-                >
-                  Log in
-                </a>
+              <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center">
+                <SignedOut>
+                  <SignInButton mode="modal">
+                    <button className="text-sm/6 font-semibold text-gray-900 dark:text-white cursor-pointer">
+                      Log in <span aria-hidden="true">&rarr;</span>
+                    </button>
+                  </SignInButton>
+                </SignedOut>
+                <SignedIn>
+                  <UserButton />
+                </SignedIn>
               </div>
             </div>
           </div>
