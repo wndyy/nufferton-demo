@@ -22,7 +22,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs/client";
+import { SignInButton, Show, UserButton } from "@clerk/nextjs";
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
