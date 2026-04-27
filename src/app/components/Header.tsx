@@ -198,16 +198,16 @@ export default function Header() {
                 </a>
               </div>
               <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center">
-                <SignedOut>
+                <Show when="signed-out">
                   <SignInButton mode="modal">
                     <button className="text-sm/6 font-semibold text-gray-900 dark:text-white cursor-pointer">
                       Log in <span aria-hidden="true">&rarr;</span>
                     </button>
                   </SignInButton>
-                </SignedOut>
-                <SignedIn>
+                </Show>
+                <Show when="signed-in">
                   <UserButton />
-                </SignedIn>
+                </Show>
               </div>
             </div>
           </div>
